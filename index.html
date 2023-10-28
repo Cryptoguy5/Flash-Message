@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash Message</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 100px;
+            background-color: darkgreen;
+        }
+
+        img {
+            height: 80%;
+        }
+        
+        .one {
+            height: 50%;
+            width: 25%;
+            background-color: white;
+        }
+
+
+
+        .two {
+            height: 50%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+         .green {
+            background-color: lightgreen;
+         }
+
+         .red {
+            background-color: lightcoral;
+         }
+
+         .buttonone {
+            width: 50%;
+            height: 25%;
+            color: white;
+            border-radius: 5%;
+            border: none;
+         }
+
+         p {
+            color: lightskyblue;
+            font-weight: bold;
+            margin-bottom: 5%;
+         }
+
+         @media (max-width: 680px) {
+            body {
+                flex-direction: column;
+                gap: 0;
+                width: 100vw;
+                gap: 20px;
+            }
+
+            .one {
+                width: 50%;
+            }
+         }
+
+         
+
+        
+    </style>
+</head>
+<body>
+    <div class="one">
+        <div class="two green">
+          <img src="./icons8-checkmark.svg" alt="checkmark">
+        </div>
+        <div class="two">
+           <h2>Success !</h2>
+           <p>Your File Has Uploaded!</p>
+           <button class="buttonone green" type="button">Continue</button>
+        </div>
+    </div>
+    <div class="one">
+        <div class="two red">
+           <img src="./icons8-x.svg" alt="cancel">
+        </div>
+        <div class="two">
+           <h2>Failed !</h2>
+           <p>Somthing went wrong!</p>
+           <button class="buttonone red" type="button">Retry</button>
+        </div>
+    </div>
+</body>
+</html>
